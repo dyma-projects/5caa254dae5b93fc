@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'app-add-user',
@@ -8,9 +9,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class AddUserComponent implements OnInit {
   @ViewChild('input') public el: ElementRef;
 
-  constructor(
-    // il faut probablement injecter un service ici !
-  ) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
