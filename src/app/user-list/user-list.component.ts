@@ -13,6 +13,11 @@ export class UserListComponent implements OnInit {
 
   ngOnInit() {
     // il faut initialiser les users ici avec le service
+    console.log(this.userService);
+    
+    this.userService.users.subscribe((users: string[]) =>{
+      this.users = users;
+    });
   }
 
 }
